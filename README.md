@@ -1,5 +1,7 @@
 # vue-cli-crudpjt
 
+* this CP.Shop Vue pjt(front) work with "shop-rest-jpa-pjt"(back) here is ther link : https://github.com/AllenChoiwonwoo/shop-rest-jpa-pjt.git
+
 ## Project setup
 ```
 npm install
