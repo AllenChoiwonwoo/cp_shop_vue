@@ -62,11 +62,11 @@ const routes = [{
   //   name: 'Read',
   //   component: () => import('../components/readVue.vue')
   // },
-  // {
-  //   path: '/user',
-  //   name: 'User',
-  //   component: () => import('../views/user.vue')
-  // }
+  {
+    path: '/user',
+    name: 'User',
+    component: () => import('../views/user.vue')
+  }
   
 ]
 

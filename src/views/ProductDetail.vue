@@ -47,7 +47,8 @@
           <button type="button" class="btn btn-outline-primary">바로구매</button>
             <!-- <button type="button" class="btn btn-outline-secondary">장바구니 담기</button>
             <button type="button" class="btn btn-outline-success">위시리스트 담기</button> -->
-            <div v-if="this.token" class="btn-group my-1" role="group" aria-label="Basic example">
+            <basket-and-like-button v-bind:prodMainData="prodMainData"></basket-and-like-button>
+            <!-- <div v-if="this.token" class="btn-group my-1" role="group" aria-label="Basic example">
                 <button @click="addProdToBasket(prodMainData)" type="button" class="btn btn-outline-primary">
                   {{setBasketButton(prodMainData.inBasket)}}
                     <b-icon-bucket-fill v-if="prodMainData.inBasket"></b-icon-bucket-fill>
@@ -66,7 +67,7 @@
                 <button type="button" class="btn btn-outline-primary" disabled>
                     <b-icon-heart >hh</b-icon-heart>
                 </button>
-            </div>
+            </div> -->
           <!-- <a href="#" class="stretched-link">Continue reading</a> -->
         </div>
         <!-- <div class="col-auto d-none d-lg-block">
@@ -110,30 +111,6 @@
           desc : {{prodDetailData.desc}}
         </h2>
         </div>
-        <h1> 여기 가지가 v-for </h1>
-<!--         
-        <img class="img-fluid center-block" 
-              src="https://static-breeze.nike.co.kr/kr/ko_kr/cmsstatic/product/CJ5809-133/8fc079d8-5591-408a-9082-7341d246a59b_2.jpg" alt="img" srcset="">
-        <h4>
-            누구부다 빠르게 남들과는 다르게
-        </h4>
-        <img class="img-fluid center-block" 
-              src="https://static-breeze.nike.co.kr/kr/ko_kr/cmsstatic/product/CJ5809-133/b5b87d26-f0a1-462b-b651-1b2fadaf4743_3.jpg" alt="img" srcset="">
-        <h4>
-            색다르게 비트를 타는 나는 비트 위의 나그네
-        </h4>
-        <img class="img-fluid center-block" 
-              src="https://static-breeze.nike.co.kr/kr/ko_kr/cmsstatic/product/CJ5809-133/03d8a34b-c8a9-4001-99c3-14fd63f6ab4a_6.jpg" alt="img" srcset="">
-        <h4>
-            인간의 한계를 돌파할 수 있게 우리의 상상력은 좀 더 빠르게
-        </h4>
-
-        <img class="img-fluid center-block" 
-              src="https://static-breeze.nike.co.kr/kr/ko_kr/cmsstatic/product/CJ5809-133/bd9d7562-38c5-4435-9852-fbfcbfc8d466_5.jpg" alt="img" srcset="">
-        <h4>
-            can i gunna getta back to the back to the feeling very good!
-        </h4> -->
-
     </div>
     </div>
   </div><!-- /.row -->
@@ -145,6 +122,7 @@
 
 <script>
 import axios from 'axios'
+import BasketAndLikeButton from '../components/basketAndLikeButton.vue'
 export default {
   data() {
     return {
@@ -174,6 +152,9 @@ export default {
       ],
     }
   },
+  components:{
+    BasketAndLikeButton,
+  },
   props: ['prodId'],
   mounted() {
     // this.$cookies.set("accesstoken", '1jkknqnih');
@@ -192,6 +173,7 @@ export default {
     
   },
   methods: {
+    /* // basketAndLikeButton.vue 로 옮겼다.
     setBasketButton(inBasket){
       if (inBasket) {
         return '빼기';
@@ -257,6 +239,7 @@ export default {
       }
       
     },
+    */
     getProdMainInfo(){
       var vm = this;
       var url = 'http://localhost:8080/product/detail/'+this.prodId+'/main'
