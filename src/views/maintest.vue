@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h1> hi there</h1>
+        <!-- <h1> hi there</h1> -->
         <announce-compo></announce-compo>
         <product-list></product-list>
     </div>

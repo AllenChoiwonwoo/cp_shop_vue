@@ -9,7 +9,7 @@
           <div class="card cmb-4 shadow-sm">
             <div class="">
               <!-- 카드이미지 동일하게 하고싶다. -->
-              <router-link to="/productDetail/1" >
+              <router-link v-bind:to="getProdDetailPath(prodDTO)" >
               <img class="card-img-top" :src="prodDTO.mainImg" :alt="prodDTO.name">
             </router-link>
             </div>
@@ -43,9 +43,12 @@
             </div>
           </div>
         </div>
-
-        <button v-on:click="this.getMoreProducts">show more</button>
-        <h1>{{testStr}}</h1>
+        
+        <button v-on:click="this.getMoreProducts" type="button">
+          <p>view more</p>
+        </button>
+        <!-- <b-icon-plus-circle v-on:click="this.getMoreProducts"></b-icon-plus-circle> -->
+        <!-- <h1>{{testStr}}</h1> -->
         
       </div> 
     </div>
@@ -70,6 +73,9 @@ export default {
       }
     },
     methods: {
+      getProdDetailPath(prodDTO){
+        return "/productDetail/".concat(prodDTO.id);
+      },
       getAnnounces() {
           console.log("getAnnounce 호출");
       },

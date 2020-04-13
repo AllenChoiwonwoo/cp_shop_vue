@@ -9,9 +9,9 @@
             <b-collapse id="nav-collapse" is-nav>
             <b-navbar-nav>
                 <!-- b-nav-item to 를 썻기에 reouter-link 와 같은 역활을 할 수 있다. -->
-                <b-nav-item to="/basket">About</b-nav-item>
+                <b-nav-item to="/maintest">main</b-nav-item>
                 <!-- <b-nav-item to="/read">Read</b-nav-item> -->
-                <b-nav-item to="/User">User</b-nav-item>
+                <b-nav-item to="/basket">basket</b-nav-item>
             </b-navbar-nav>
 
             <!-- Right aligned nav items -->

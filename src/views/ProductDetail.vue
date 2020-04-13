@@ -2,7 +2,8 @@
 
   <div class="container-md">
       <div class="py-3">
-        <h1>라우터 path 를 통해서 :param 으로 데이터 넘기는 법을 모르겠다.</h1>
+        <!-- <h1>(해결은 했으나 다른 방법을 씀) 라우터 path 를 통해서 :param 으로 데이터 넘기는 법을 모르겠다.</h1> -->
+        <!-- <h2>{{prodId}}</h2> -->
       </div>
       <!-- <div class="jumbotron text-white rounded bg-dark">
           <div class="">
@@ -84,7 +85,7 @@
       </h3> -->
 
       <div class="blog-post">
-        <h2 class="blog-post-title">adidas 로고 올드스쿨 반짚업 윈드후드탑(95~98)</h2>
+        <h2 class="blog-post-title">{{prodMainData.name}}</h2>
         <p class="blog-post-meta">January 1, 2014 by <a href="#">adidas</a></p>
         <p>제품번호 : 12345678</p>
         <p>실측사이즈</p>
@@ -147,7 +148,8 @@ import axios from 'axios'
 export default {
   data() {
     return {
-      selectedProdId : "1",
+      // prodId : "",
+      selectedProdId : 1,
       token : null,
       prodMainData : {
         id : "",
@@ -172,13 +174,14 @@ export default {
       ],
     }
   },
+  props: ['prodId'],
   mounted() {
     // this.$cookies.set("accesstoken", '1jkknqnih');
     
   },
   created() {  
     this.token = this.$cookies.get('accesstoken');
-    console.log("token = ",this.token," , prodId = ",this.selectedProdId);
+    console.log("token = ",this.token," , prodId = ",this.prodId);
     // this.getProdMainInfo();
     if (this.token) {// 토큰 있으면 = 로그인 한상태면
       this.getProdMainInfo();
@@ -256,7 +259,7 @@ export default {
     },
     getProdMainInfo(){
       var vm = this;
-      var url = 'http://localhost:8080/product/detail/'+this.selectedProdId+'/main'
+      var url = 'http://localhost:8080/product/detail/'+this.prodId+'/main'
       let config = {
                     headers: {
                         accesstoken: this.token,
@@ -276,7 +279,7 @@ export default {
     },
     getProdMainInfoNoToken(){
       var vm = this;
-      var url = 'http://localhost:8080/product/detail/'+this.selectedProdId+'/main';
+      var url = 'http://localhost:8080/product/detail/'+this.prodId+'/main';
 
       console.log("url = ",url);
       axios.get(url)
@@ -292,7 +295,7 @@ export default {
     },
     getProdDetailInfo(){
       var vm = this;
-      var url = 'http://localhost:8080/product/detail/'+this.selectedProdId+'/info'
+      var url = 'http://localhost:8080/product/detail/'+this.prodId+'/info'
       let config = {
                     headers: {
                         accesstoken: this.token,
