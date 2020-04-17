@@ -153,6 +153,7 @@
 
             },
             deleteBasketItem: function (item) {
+                var vm =this;
                 console.log("delete basket item ", item);
                 var url = 'http://localhost:8080/basket';
                 let config = {
@@ -170,7 +171,7 @@
                         if (response.data.code > 299) {
                             alert("장바구니에서 상품삭제를 실패했습니다.");
                         }
-                        this.$router.go();
+                        vm.$router.go();
                         return;
                     })
                     .catch(function (error) {
