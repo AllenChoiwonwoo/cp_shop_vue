@@ -1,26 +1,27 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
+// import Home from '../views/Home.vue'
 // import HeaderCompo from './components/headerCompo.vue';
 // import axios from 'axios'
 // import footer from '../components/footer.vue'
 
 Vue.use(VueRouter)
 
-const routes = [{
-    path: '/',
-    name: 'Home',
-    // components: {
-    //   Home,
-    // }
-    components: {
-      // header: HeaderCompo,
-      default: Home,
-    }
+const routes = [
+  // {
+  //   path: '/',
+  //   name: 'Home',
+  //   // components: {
+  //   //   Home,
+  //   // }
+  //   components: {
+  //     // header: HeaderCompo,
+  //     default: Home,
+  //   }
 
-    // component: Home
-    //  component: () => import( /* webpackChunkName: "about" */ '../views/Home.vue')
-  },
+  //   // component: Home
+  //   //  component: () => import( /* webpackChunkName: "about" */ '../views/Home.vue')
+  // },
   {
     path: '/login',
     name: 'login',
@@ -44,7 +45,7 @@ const routes = [{
     component: () => import('../views/BasketVue.vue')
   },
   {
-    path: '/maintest',
+    path: '/',
     name: 'maintest',
     component: () => import( /* webpackChunkName: "about" */ '../views/maintest.vue')
   },

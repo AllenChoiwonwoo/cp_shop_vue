@@ -25,8 +25,8 @@
             </div>
           </div>
 
-          <button v-on:click="this.getMoreProducts" type="button">
-            <p>view more</p>
+          <button class="btn btn-primary" v-on:click="this.getMoreProducts" type="button">
+            view more
           </button>
 
         </div>

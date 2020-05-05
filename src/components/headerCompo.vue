@@ -2,14 +2,14 @@
     <div>
         <div>
         <b-navbar toggleable="lg" type="dark" variant="info">
-            <b-navbar-brand to="/maintest">CP.Shop</b-navbar-brand>
+            <b-navbar-brand to="/">CP.Shop</b-navbar-brand>
 
             <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 
             <b-collapse id="nav-collapse" is-nav>
             <b-navbar-nav>
                 <!-- b-nav-item to 를 썻기에 reouter-link 와 같은 역활을 할 수 있다. -->
-                <b-nav-item to="/maintest">main</b-nav-item>
+                <b-nav-item to="/">main</b-nav-item>
                 <!-- <b-nav-item to="/read">Read</b-nav-item> -->
                 <b-nav-item to="/basket">basket</b-nav-item>
             </b-navbar-nav>

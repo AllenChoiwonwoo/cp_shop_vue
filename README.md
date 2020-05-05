@@ -6,6 +6,10 @@
 this CP.Shop Vue pjt(front) work with "shop-rest-jpa-pjt"(back)
 here is ther link : [shop-rest-jpa-pjt](https://github.com/AllenChoiwonwoo/shop-rest-jpa-pjt.git)
 
+## 메인페이지
+ - BaseUrl : http://localhost:8081/
+![main](./main_page_image_1.PNG)
+
 # 프로젝트 소개
 간단한 쇼핑몰입니다.
 

@@ -9,15 +9,15 @@
             <button type="button" class="btn btn-outline-primary">
                 좋아요
                 <b-icon-heart-fill v-if="prodMainData.inBasket"></b-icon-heart-fill>
-                <b-icon-heart v-else>n</b-icon-heart>
+                <b-icon-heart v-else></b-icon-heart>
             </button>
         </div>
         <div v-else class="btn-group my-1" role="group" aria-label="Basic example">
             <button type="button" class="btn btn-outline-primary" disabled>
-                hi<b-icon-bucket>hi</b-icon-bucket>
+                <b-icon-bucket></b-icon-bucket>
             </button>
             <button type="button" class="btn btn-outline-primary" disabled>
-                <b-icon-heart>hh</b-icon-heart>
+                <b-icon-heart></b-icon-heart>
             </button>
         </div>
     <!-- </div> -->
