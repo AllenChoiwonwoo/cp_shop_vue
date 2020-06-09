@@ -23,7 +23,6 @@ here is ther link : [shop-rest-jpa-pjt](https://github.com/AllenChoiwonwoo/shop-
 
 ## 제작 정보
 vue-router 템플릿을 기반으로 만든 간단한 쇼핑몰 사이트 입니다.
-CodePresso 의  Dev-ops 과정을 수강하면 개발한 학습용 프로젝트 입니다.
 
 ## 사용기술
  - HTML/CSS
